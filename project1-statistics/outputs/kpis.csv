@@ -1,0 +1,9 @@
+kpi,value
+total_customers,2000.0
+average_premium,904.44
+average_claim_amount,236.99
+claim_frequency,0.598
+average_satisfaction,2.97
+churn_rate,0.158
+dispute_rate,0.116
+late_payment_rate,0.819

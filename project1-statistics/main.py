@@ -30,6 +30,30 @@ def analyze(df: pd.DataFrame, output_dir: Path) -> None:
     summary = df.describe(include='all').T
     summary.to_csv(output_dir / "summary_stats.csv")
 
+    kpi_df = pd.DataFrame({
+        "kpi": [
+            "total_customers",
+            "average_premium",
+            "average_claim_amount",
+            "claim_frequency",
+            "average_satisfaction",
+            "churn_rate",
+            "dispute_rate",
+            "late_payment_rate"
+        ],
+        "value": [
+            len(df),
+            round(df["annual_premium"].mean(), 2),
+            round(df["claim_amount"].mean(), 2),
+            round((df["claims_count"] > 0).mean(), 3),
+            round(df["satisfaction_score"].mean(), 2),
+            round(df["churn"].mean(), 3),
+            round(df["has_dispute"].mean(), 3),
+            round((df["payment_delay_days"] > 0).mean(), 3)
+        ]
+    })
+    kpi_df.to_csv(output_dir / "kpis.csv", index=False)
+
     plt.figure(figsize=(8, 5))
     sns.histplot(df["annual_premium"], bins=20, kde=True)
     plt.title("Distribution of annual premium")
@@ -65,6 +89,14 @@ def analyze(df: pd.DataFrame, output_dir: Path) -> None:
     plt.title("Premium vs claim amount by churn status")
     plt.tight_layout()
     plt.savefig(output_dir / "premium_vs_claims.png", dpi=180)
+    plt.close()
+
+    plt.figure(figsize=(8, 5))
+    sns.barplot(data=kpi_df, x="kpi", y="value", hue="kpi", palette="Set2", dodge=False, legend=False)
+    plt.xticks(rotation=45, ha="right")
+    plt.title("Business KPI overview")
+    plt.tight_layout()
+    plt.savefig(output_dir / "kpi_overview.png", dpi=180)
     plt.close()
 
     corr = df[["age", "tenure_months", "annual_premium", "claims_count", "claim_amount", "satisfaction_score", "payment_delay_days", "has_dispute", "churn"]].corr()
