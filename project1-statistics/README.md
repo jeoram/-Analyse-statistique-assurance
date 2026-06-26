@@ -1,66 +1,83 @@
 # Project 1 — Insurance Customer Analytics
 
-## Objective
+## Overview
 
-This project is designed to demonstrate the core skills expected for a Data Analyst role in an insurance environment, especially in the context of an alternance at Covéa.
+This project is a portfolio-ready data analysis initiative designed to reflect the expectations of a Data Analyst role in the insurance sector. It combines statistical analysis, business-oriented KPI tracking, and clear data visualization to show how raw customer data can be transformed into actionable insights.
 
-It focuses on:
-- exploratory and advanced statistical analysis
-- business-oriented data interpretation
-- KPI evaluation and documentation
-- clear communication of findings
+The project was built to demonstrate:
+- strong exploratory data analysis skills
+- solid understanding of insurance-related business metrics
+- ability to turn data into clear visual and written insights
+- a structured, reproducible Python workflow
 
-## Business case
+## Business context
 
-The aim is to analyze customer and policy data to understand patterns related to:
-- claim frequency
-- premium behavior
+The goal is to analyze a simulated insurance customer base in order to better understand:
+- premium distribution
+- claim behavior
 - customer satisfaction
 - churn risk
-- service quality indicators
+- operational quality signals such as disputes and payment delays
 
-This is aligned with the type of analyses expected in an insurance business context.
+These topics are highly relevant for insurance companies that want to improve customer retention, risk monitoring, and service experience.
 
 ## What is included
 
-- synthetic insurance dataset
-- descriptive statistics and distributions
-- segmentation analysis
-- correlation analysis
-- hypothesis-driven analysis
-- business recommendations
-- reusable Python analysis workflow
+- a realistic synthetic insurance dataset
+- descriptive statistics and distribution analysis
+- segmentation analysis by customer type
+- correlation analysis between key business variables
+- KPI generation for business monitoring
+- visual outputs suitable for presentations and portfolio sharing
 
-## Structure
+## Key analyses performed
 
-- data/ : dataset used for analysis
-- src/ : Python scripts for analysis
-- outputs/ : charts, summaries and reports
+- distribution of annual premiums
+- claims by customer segment
+- customer satisfaction by segment
+- churn rate by segment
+- premium vs. claim amount relationship
+- correlation analysis across core variables
+- KPI dashboard-style summary
 
-## Main analyses performed
+## Generated outputs
 
-- descriptive statistics
-- distributions by segment
-- correlation analysis
-- churn / risk indicator analysis
-- customer behavior insights
+The workflow generates several files in the outputs folder, including:
+- summary statistics in CSV format
+- KPI tables in CSV format
+- charts for premium, claims, satisfaction, churn, and correlation analysis
 
-## Tools used
+## Project structure
+
+- data/ : contains the generated insurance dataset
+- outputs/ : stores charts, summaries, and KPI exports
+- main.py : Python script that generates the data and performs the analysis
+
+## Tools and libraries
 
 - Python
 - pandas
 - numpy
 - seaborn
 - matplotlib
-- scikit-learn
 
 ## How to run
+
+From the project folder, run:
 
 ```bash
 python main.py
 ```
 
-## Deliverables
+## Expected outcome
 
-- summary report in CSV/PNG
-- statistical insights ready to be shared with business teams
+This project demonstrates a practical and business-focused analytical approach that can be presented to recruiters or hiring managers as part of a Data Analyst portfolio.
+
+## Why this project is relevant
+
+It highlights competencies that are valuable in insurance and analytics roles:
+- data cleaning and preparation
+- statistical analysis
+- KPI definition and interpretation
+- data storytelling through visualization
+- reproducible analysis workflows
