@@ -1,6 +1,6 @@
 # Two Data Analyst Portfolio Projects for Covéa
 
-This folder contains two portfolio projects designed to support a candidature for a Data Analyst role in an insurance context.
+This folder contains two portfolio projects designed to support for a Data Analyst role in an insurance context.
 
 ## Project 1 — Insurance Customer Analytics
 
